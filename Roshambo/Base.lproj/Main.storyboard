@@ -15,7 +15,35 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBW-5g-04C">
+                                <rect key="frame" x="140" y="267" width="75" height="65"/>
+                                <state key="normal" image="paper">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUL-4e-Ath">
+                                <rect key="frame" x="263" y="267" width="75" height="65"/>
+                                <state key="normal" image="scissors">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9El-Kv-SyM">
+                                <rect key="frame" x="386" y="267" width="75" height="65"/>
+                                <state key="normal" image="rock">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="UBW-5g-04C" secondAttribute="centerY" constant="0.5" id="3og-TW-4KX"/>
+                            <constraint firstAttribute="centerY" secondItem="AUL-4e-Ath" secondAttribute="centerY" constant="0.5" id="8cd-eS-tXG"/>
+                            <constraint firstAttribute="centerY" secondItem="9El-Kv-SyM" secondAttribute="centerY" constant="0.5" id="Dhj-DO-pAD"/>
+                            <constraint firstItem="9El-Kv-SyM" firstAttribute="leading" secondItem="AUL-4e-Ath" secondAttribute="trailing" constant="48" id="Jbi-9D-k6N"/>
+                            <constraint firstItem="AUL-4e-Ath" firstAttribute="leading" secondItem="UBW-5g-04C" secondAttribute="trailing" constant="48" id="Mxy-d9-W6e"/>
+                            <constraint firstAttribute="centerX" secondItem="AUL-4e-Ath" secondAttribute="centerX" constant="-0.5" id="m8d-MS-a1V"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -40,4 +68,9 @@
             <point key="canvasLocation" x="1148" y="425"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="paper" width="75" height="65"/>
+        <image name="rock" width="75" height="65"/>
+        <image name="scissors" width="75" height="65"/>
+    </resources>
 </document>
