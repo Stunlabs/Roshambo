@@ -23,14 +23,14 @@ class ViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     
-        
         if  segue.identifier == "result" {
         
         let resultViewController = segue.destinationViewController as! ResultViewController
             
             
-            if sender?.tag == 0 {
+            if sender?.tag == 1 {
                 resultViewController.choice = "Paper"
+                
                 
             } else {
                 resultViewController.choice = "Scissors"
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
             
         } else if sender == paperBtn {
         
-            self.performSegueWithIdentifier("result", sender: self)
+            self.performSegueWithIdentifier("result", sender: paperBtn)
             
         
         }

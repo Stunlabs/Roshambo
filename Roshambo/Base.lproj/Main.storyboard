@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBW-5g-04C">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBW-5g-04C">
                                 <rect key="frame" x="140" y="267" width="75" height="65"/>
                                 <state key="normal" image="paper">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -25,7 +25,7 @@
                                     <action selector="makeChoice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8rl-g8-HdG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUL-4e-Ath">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUL-4e-Ath">
                                 <rect key="frame" x="263" y="268" width="75" height="65"/>
                                 <state key="normal" image="scissors">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -34,7 +34,7 @@
                                     <segue destination="3cp-8N-E0c" kind="presentation" identifier="result" id="yHd-QF-3us"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9El-Kv-SyM">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9El-Kv-SyM">
                                 <rect key="frame" x="386" y="267" width="75" height="65"/>
                                 <state key="normal" image="rock">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -90,9 +90,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="itsATie" translatesAutoresizingMaskIntoConstraints="NO" id="6BH-Mm-vXp">
+                                <rect key="frame" x="209" y="200" width="183" height="200"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="6BH-Mm-vXp" secondAttribute="centerX" id="2l4-uo-aF8"/>
+                            <constraint firstAttribute="centerY" secondItem="6BH-Mm-vXp" secondAttribute="centerY" id="CQ5-E8-5vk"/>
                             <constraint firstAttribute="centerX" secondItem="gwh-Sc-2Wp" secondAttribute="centerX" id="J7e-pK-nzF"/>
                             <constraint firstItem="gwh-Sc-2Wp" firstAttribute="top" secondItem="7aM-b8-3gU" secondAttribute="bottom" constant="8" id="L1N-qg-wVS"/>
                             <constraint firstItem="c3P-dy-8nq" firstAttribute="top" secondItem="G3P-EU-z8w" secondAttribute="bottom" constant="20" id="a9W-7a-6dW"/>
@@ -101,15 +106,17 @@
                     </view>
                     <connections>
                         <outlet property="playAgainBtn" destination="G3P-EU-z8w" id="sfX-Q6-OGq"/>
+                        <outlet property="resultImg" destination="6BH-Mm-vXp" id="o7s-18-atn"/>
                         <outlet property="resultLbl" destination="gwh-Sc-2Wp" id="EnB-6k-IG3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VrE-vp-e3l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1070" y="415"/>
+            <point key="canvasLocation" x="956" y="399"/>
         </scene>
     </scenes>
     <resources>
+        <image name="itsATie" width="183" height="200"/>
         <image name="paper" width="75" height="65"/>
         <image name="rock" width="75" height="65"/>
         <image name="scissors" width="75" height="65"/>
