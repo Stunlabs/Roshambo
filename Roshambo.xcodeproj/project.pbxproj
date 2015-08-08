@@ -81,11 +81,11 @@
 			children = (
 				C60A6AE71B7603A8007678EA /* AppDelegate.swift */,
 				C60A6AE91B7603A8007678EA /* ViewController.swift */,
+				C60A6B071B760479007678EA /* ResultViewController.swift */,
 				C60A6AEB1B7603A8007678EA /* Main.storyboard */,
 				C60A6AEE1B7603A8007678EA /* Images.xcassets */,
 				C60A6AF01B7603A8007678EA /* LaunchScreen.xib */,
 				C60A6AE51B7603A8007678EA /* Supporting Files */,
-				C60A6B071B760479007678EA /* ResultViewController.swift */,
 			);
 			path = Roshambo;
 			sourceTree = "<group>";
