@@ -21,38 +21,52 @@
                                 <state key="normal" image="paper">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="makeChoice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8rl-g8-HdG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUL-4e-Ath">
-                                <rect key="frame" x="263" y="267" width="75" height="65"/>
+                                <rect key="frame" x="263" y="268" width="75" height="65"/>
                                 <state key="normal" image="scissors">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="3cp-8N-E0c" kind="presentation" identifier="result" id="yHd-QF-3us"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9El-Kv-SyM">
                                 <rect key="frame" x="386" y="267" width="75" height="65"/>
                                 <state key="normal" image="rock">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="makeChoice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gNG-nn-WHR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="UBW-5g-04C" secondAttribute="centerY" constant="0.5" id="3og-TW-4KX"/>
-                            <constraint firstAttribute="centerY" secondItem="AUL-4e-Ath" secondAttribute="centerY" constant="0.5" id="8cd-eS-tXG"/>
+                            <constraint firstAttribute="centerY" secondItem="AUL-4e-Ath" secondAttribute="centerY" id="8cd-eS-tXG"/>
                             <constraint firstAttribute="centerY" secondItem="9El-Kv-SyM" secondAttribute="centerY" constant="0.5" id="Dhj-DO-pAD"/>
                             <constraint firstItem="9El-Kv-SyM" firstAttribute="leading" secondItem="AUL-4e-Ath" secondAttribute="trailing" constant="48" id="Jbi-9D-k6N"/>
                             <constraint firstItem="AUL-4e-Ath" firstAttribute="leading" secondItem="UBW-5g-04C" secondAttribute="trailing" constant="48" id="Mxy-d9-W6e"/>
                             <constraint firstAttribute="centerX" secondItem="AUL-4e-Ath" secondAttribute="centerX" constant="-0.5" id="m8d-MS-a1V"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="paperBtn" destination="UBW-5g-04C" id="54F-2a-xwf"/>
+                        <outlet property="rockBtn" destination="9El-Kv-SyM" id="Xyu-AJ-DQZ"/>
+                        <outlet property="scissorsBtn" destination="AUL-4e-Ath" id="Gyt-FZ-Chx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="R1n-97-gzP">
             <objects>
-                <viewController id="3cp-8N-E0c" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="resultVC" id="3cp-8N-E0c" customClass="ResultViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7aM-b8-3gU"/>
                         <viewControllerLayoutGuide type="bottom" id="c3P-dy-8nq"/>
@@ -65,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VrE-vp-e3l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1148" y="425"/>
+            <point key="canvasLocation" x="1149" y="429"/>
         </scene>
     </scenes>
     <resources>

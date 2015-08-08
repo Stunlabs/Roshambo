@@ -11,15 +11,49 @@ import UIKit
 class ViewController: UIViewController {
     
     
+    @IBOutlet weak var rockBtn: UIButton!
+    @IBOutlet weak var paperBtn: UIButton!
+    @IBOutlet weak var scissorsBtn: UIButton!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    
+        
+        let resultViewController = segue.destinationViewController as! ResultViewController
+        
+        resultViewController.choice = "Paper"
+        
+        
     }
 
 
     
+    @IBAction func makeChoice(sender: UIButton) {
+        
+        
+        if sender == rockBtn {
+        
+            var resultViewController: ResultViewController
+        
+            resultViewController = self.storyboard?.instantiateViewControllerWithIdentifier("resultVC") as! ResultViewController
+        
+            resultViewController.choice = "Rock"
+            
+            self.presentViewController(resultViewController, animated: true, completion: nil)
+            
+        } else if sender == paperBtn {
+        
+            self.performSegueWithIdentifier("result", sender: self)
+            
+        
+        }
+        
+    }
     
     
     
